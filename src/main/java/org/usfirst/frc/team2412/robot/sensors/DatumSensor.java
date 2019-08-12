@@ -23,8 +23,10 @@ public class DatumSensor {
 		String response = port.readString();
 
 		JSONArray[] JSONValues = new JSONArray[values.length + 1];
-
+		
 		if (response != null && response.length() > 1) {
+
+			System.out.println(response);
 			try {
 				JSONObject responseObject = new JSONObject(response);
 
